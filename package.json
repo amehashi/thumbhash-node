@@ -1,11 +1,15 @@
 {
-  "name": "@napi-rs/package-template",
+  "name": "thumbhash-node",
   "version": "1.0.0",
-  "description": "Template project for writing node package with napi-rs",
+  "description": "thumbhash binding for Node.js",
+  "author": "nemurubaka <cijiugechu@gmail.com>",
   "main": "index.js",
-  "repository": "git@github.com:napi-rs/package-template.git",
+  "repository": "https://github.com/amehashi/thumbhash-node",
   "license": "MIT",
   "keywords": [
+    "thumbhash",
+    "image placeholder",
+    "image",
     "napi-rs",
     "NAPI",
     "N-API",
@@ -18,7 +22,7 @@
     "index.js"
   ],
   "napi": {
-    "name": "package-template",
+    "name": "thumbhash-node",
     "triples": {
       "defaults": true,
       "additional": [
@@ -44,6 +48,7 @@
   },
   "scripts": {
     "artifacts": "napi artifacts",
+    "simple": "node ./simple-test.js",
     "bench": "node -r @swc-node/register benchmark/bench.ts",
     "build": "napi build --platform --release --pipe \"prettier -w\"",
     "build:debug": "napi build --platform --pipe \"prettier -w\"",
@@ -57,10 +62,12 @@
     "version": "napi version"
   },
   "devDependencies": {
+    "@napi-rs/canvas": "^0.1.39",
     "@napi-rs/cli": "^2.14.6",
     "@swc-node/register": "^1.5.5",
     "@swc/core": "^1.3.32",
     "@taplo/cli": "^0.5.2",
+    "@types/node": "^18.15.9",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
     "ava": "^5.1.1",
@@ -74,6 +81,7 @@
     "lint-staged": "^13.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.3",
+    "thumbhash": "^0.1.1",
     "typescript": "^4.9.5"
   },
   "lint-staged": {
