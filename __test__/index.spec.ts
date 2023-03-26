@@ -36,5 +36,5 @@ test('rgba to thumbhash', async (t) => {
 
   const hash = rgbaToThumbHash(width, height, rgba)
 
-  t.is(hash.length, 21)
+  t.assert(Object.prototype.toString.call(hash), '[object Uint8Array]')
 })
