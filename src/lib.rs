@@ -1,12 +1,8 @@
 #![deny(clippy::all)]
 
-#[cfg(not(target_env = "msvc"))]
+#[cfg(not(all(target_os = "linux", target_env = "musl", target_arch = "aarch64")))]
 #[global_allocator]
-static GLOBAL: jemallocator::Jemalloc = jemallocator::Jemalloc;
-
-#[cfg(target_os = "windows")]
-#[global_allocator]
-static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
+static ALLOC: mimalloc_rust::GlobalMiMalloc = mimalloc_rust::GlobalMiMalloc;
 
 use napi::bindgen_prelude::*;
 use napi_derive::napi;
