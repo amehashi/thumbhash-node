@@ -1,6 +1,6 @@
 {
   "name": "thumbhash-node",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "thumbhash binding for Node.js",
   "author": "nemurubaka <cijiugechu@gmail.com>",
   "main": "index.js",
