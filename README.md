@@ -4,8 +4,6 @@
 
 [`thumbhash`](https://github.com/evanw/thumbhash) binding for Node.js.
 
-
-
 ## Install this package
 
 ```
@@ -69,5 +67,4 @@ export interface Image {
  * An error will be returned if the input is too short.
  */
 export function thumbHashToRGBA(hash: Uint8Array): Image
-
 ```

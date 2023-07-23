@@ -37,11 +37,6 @@ async function run() {
   await b.suite(
     'to thumbhash',
 
-    b.add('thumbhash', async () => {
-      const rgbaToThumbHash = await import('thumbhash').then((mod) => mod.rgbaToThumbHash)
-      rgbaToThumbHash(width, height, rgba)
-    }),
-
     b.add('thumbhash-node', () => {
       rgbaToThumbHashNode(width, height, rgba)
     }),
